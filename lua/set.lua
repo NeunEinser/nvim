@@ -17,3 +17,8 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 16
 vim.opt.signcolumn = "yes"
+
+vim.api.nvim_create_autocmd({'BufNewFile','BufRead'}, {
+	pattern = { "*mcfunction" },
+	command = 'set filetype=mcfunction'
+})

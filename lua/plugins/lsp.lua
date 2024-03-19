@@ -39,5 +39,8 @@ return {
 				end
 			},
 		})
+		require'lspconfig'.spyglassmc_language_server.setup{
+			root_dir = require('lspconfig.util').root_pattern('pack.mcmeta')
+		}
 	end
 }
